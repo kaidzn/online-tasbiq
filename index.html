@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Online tasbiq</title>
+</head>
+<body>
+    <section class="word">
+        <div class="container">
+            <p class="salawat">
+                Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin, kama sallaita 'ala Ibrahima wa 'ala ali Ibrahima, innaka Hamidun Majid.
+            </p>
+        </div>
+    </section>
+     <div class="animation">
+        <img src="img/Mukhammad.png" alt="Photo of Prophet Mukhammad">
+    </div>
+    <section class="counter">
+        <div class="container">
+            <button onclick="increment()" class="counterBtn">
+                0
+            </button>
+        </div>
+    </section>
+   
+    <script>
+        let counterBtn = document.querySelector(".counterBtn");
+        let counter = 0;
+        let animationShow = document.querySelector("img");
+
+        function increment(){
+            
+            counter+=1;
+            if(counter % 33 === 0){
+                animationShow.style.display = "block";
+                setTimeout(() => {
+                    animationShow.style.display = "none"
+                }, 2000);
+            }
+            counterBtn.textContent = counter;
+        }
+
+        
+
+    </script>
+</body>
+</html>
